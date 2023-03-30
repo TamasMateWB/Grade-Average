@@ -8,7 +8,7 @@ namespace Grade_Average
 {
     internal class Student
     {
-        List<int> grades = new List<int>();
+        public List<int> grades = new List<int>();
         int gradesSum = 0;
         decimal gradesAvg = 0;
         public string name = "";

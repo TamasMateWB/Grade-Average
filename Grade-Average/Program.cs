@@ -1,10 +1,12 @@
-﻿// --------
+﻿using Grade_Average;
+using System.Diagnostics;
+
+// --------
 // Copied 
 // --------
 
-
+/*
 // initialize variables - graded assignments 
-using Grade_Average;
 
 int currentAssignments = 5;
 
@@ -68,7 +70,7 @@ Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA");
 Console.WriteLine("Nicolas:\t" + nicolasScore + "\tB");
 Console.WriteLine("Zahirah:\t" + zahirahScore + "\tB");
 Console.WriteLine("Jeong:\t\t" + jeongScore + "\tA");
-
+*/
 
 
 
@@ -81,8 +83,32 @@ Console.WriteLine("Jeong:\t\t" + jeongScore + "\tA");
 Student student1 = new("student1", new List<int> { 3, 4, 5, 6, 7 });
 Student student2 = new("student2", new List<int> { 1, 2, 3, 4, 5 });
 Student student3 = new("student3", new List<int> { 6, 7, 8, 9, 10 });
+List<Student> students = new List<Student> { student1, student2, student3 };
+
+// fancy print
+Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("Name\t\tGrades\t\tSum\tAverage");
+foreach (Student student in students)
+{
+    // name
+    Console.Write(student.name + "\t");
+    // grades
+    foreach(int grade in student.grades)
+    {
+        Console.Write(grade + " ");
+    }
+    Console.Write("\t");
+    // sum
+    Console.Write(student.GetGradesSum() + "\t");
+    // avg
+    Console.Write(student.GetGradesAvg());
+    // new line
+    Console.WriteLine();
+}
 
 // print avg
-Console.WriteLine(student1.name + ": /t" + student1.GetGradesAvg);
-Console.WriteLine(student2.name + ": /t" + student2.GetGradesAvg);
-Console.WriteLine(student3.name + ": /t" + student3.GetGradesAvg);
+Console.WriteLine("" + Environment.NewLine + "Name\t\tAverage");
+Console.WriteLine(student1.name + ": \t" + student1.GetGradesAvg());
+Console.WriteLine(student2.name + ": \t" + student2.GetGradesAvg());
+Console.WriteLine(student3.name + ": \t" + student3.GetGradesAvg());
