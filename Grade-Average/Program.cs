@@ -48,3 +48,16 @@ Console.WriteLine("Sophia: " + sophiaScore);
 Console.WriteLine("Nicolas: " + nicolasScore);
 Console.WriteLine("Zahirah: " + zahirahScore);
 Console.WriteLine("Jeong: " + jeongScore);
+
+Console.WriteLine(Environment.NewLine + "Decimal Averages with Grades:" + Environment.NewLine);
+
+sophiaScore = (decimal)sophiaSum / currentAssignments;
+nicolasScore = (decimal)nicolasSum / currentAssignments;
+zahirahScore = (decimal)zahirahSum / currentAssignments;
+jeongScore = (decimal)jeongSum / currentAssignments;
+
+Console.WriteLine("Student\tGrade\n");
+Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA");
+Console.WriteLine("Nicolas:\t" + nicolasScore + "\tB");
+Console.WriteLine("Zahirah:\t" + zahirahScore + "\tB");
+Console.WriteLine("Jeong:\t\t" + jeongScore + "\tA");
