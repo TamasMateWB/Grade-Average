@@ -1,4 +1,11 @@
-﻿// initialize variables - graded assignments 
+﻿// --------
+// Copied 
+// --------
+
+
+// initialize variables - graded assignments 
+using Grade_Average;
+
 int currentAssignments = 5;
 
 int sophia1 = 93;
@@ -61,3 +68,21 @@ Console.WriteLine("Sophia:\t\t" + sophiaScore + "\tA");
 Console.WriteLine("Nicolas:\t" + nicolasScore + "\tB");
 Console.WriteLine("Zahirah:\t" + zahirahScore + "\tB");
 Console.WriteLine("Jeong:\t\t" + jeongScore + "\tA");
+
+
+
+
+// -----
+// Own
+// -----
+
+
+// declare
+Student student1 = new("student1", new List<int> { 3, 4, 5, 6, 7 });
+Student student2 = new("student2", new List<int> { 1, 2, 3, 4, 5 });
+Student student3 = new("student3", new List<int> { 6, 7, 8, 9, 10 });
+
+// print avg
+Console.WriteLine(student1.name + ": /t" + student1.GetGradesAvg);
+Console.WriteLine(student2.name + ": /t" + student2.GetGradesAvg);
+Console.WriteLine(student3.name + ": /t" + student3.GetGradesAvg);
